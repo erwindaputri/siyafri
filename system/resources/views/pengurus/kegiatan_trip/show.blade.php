@@ -1,0 +1,71 @@
+@extends('tamplate.pengurus')
+@section('content')
+<div class="content">
+
+    <!-- Start Content-->
+    <div class="container-fluid">
+
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box">
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Pengurus</a></li>
+                            <li class="breadcrumb-item ">Field Trip</li>
+                            <li class="breadcrumb-item active">Detail</li>
+                        </ol>
+                    </div>
+                    <h4 class="page-title">Field Trip</h4>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card-box">
+                    <h4 class="header-title"> Detail Data field Trip</h4>
+
+
+                    <hr>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <table class="table table-striped">
+                                    <tr>
+                                        <td>Judul</td>
+                                        <td>: {{ucwords($trip->judul)}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Deskripsi</td>
+                                        <td>:{!! nl2br($trip->deskripsi) !!}
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+
+                                </table>
+                            </div>
+                            <div class="col-md-3 col-xl-4 creative personal photography">
+                                <div class="gallery-box">
+                                    <a href="{{ url("public/$trip->gambar")}}" class="image-popup" title="Screenshot-2" width="50%">
+                                        <img src="{{ url("public/$trip->gambar")}}" class="thumb-img img-fluid" alt="work-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <td></td>
+                            <a type="button" href="{{ url('page-kegiatan_trip') }}" class="btn btn-dark float-right"><i
+                                class="fa fa-arrow-left"></i> kembali
+                        </a>
+                            </tr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@endsection
