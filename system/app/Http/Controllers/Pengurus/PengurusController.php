@@ -10,7 +10,6 @@ use App\Models\Ebook;
 use App\Models\Kegiatan_trip;
 use App\Models\Profil;
 use App\Models\Reptile;
-use App\Models\Seminar;
 use Illuminate\Http\Request;
 use App\Models\User;
 
